@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    const num = 175;
+const isDisarium = num => {
+   const res = String(num)
+   .split("")
+   .reduce((acc, val, ind) => {
+      acc += Math.pow(+val, ind+1);
+      return acc;
+   }, 0);
+   return res === num;
+};
+console.log(isDisarium(num));
+console.log(isDisarium(32));
+console.log(isDisarium(4334));
+</script>
+</html>
